@@ -1,0 +1,7 @@
+{
+    "/chat/*": {
+        "target": "https://united-administrator.herokuapp.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

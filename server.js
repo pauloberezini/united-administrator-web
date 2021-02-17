@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('./dist/united-administrator-web'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/united-administrator-web/'}),
+    res.sendFile('index.html', {root: 'dist/united-administrator-web/'})
 );
 
 // Start the app by listening on the default Heroku port
