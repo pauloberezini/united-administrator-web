@@ -37,10 +37,10 @@ export class FirstComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router, private apiService: ServicesService) { }
 
-  displayedColumns: string[] = ['first_name','last_name','points'];
+  displayedColumns: string[] = ['first_name', 'last_name', 'points'];
   dataSource;
 
-  @ViewChild(MatSort) sort: MatSort;
+  //@ViewChild(MatSort) sort: MatSort;
 
 
 
@@ -48,12 +48,10 @@ export class FirstComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.apiService.fetchData(params.chat_id).subscribe((data: any) => {
         debugger
-        this.dataSource = new MatTableDataSource(data.message);
-        this.dataSource.sort((a, b) => a.points - b.points);
-    //this.dataSource.sort = this.sort;
+        this.dataSource = data.message;
+        this.dataSource.sort((a, b) => b.points - a.points);
       })
     });
   }
 
 }
-//http://localhost:4200/?chat_id=-2341432134
