@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {TableModule} from 'primeng/table';
     AccordionModule,
     ButtonModule,
     TableModule,
+    InputTextModule,
     BrowserAnimationsModule
   ],
   providers: [],
