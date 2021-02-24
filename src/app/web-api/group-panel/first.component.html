@@ -1,0 +1,25 @@
+<div class="card">
+  <h2>Group reputation</h2>
+  <p-table #dt1 [rows]="10" [showCurrentPageReport]="true" [globalFilterFields]="['first_name','last_name']"
+    [rowsPerPageOptions]="[10,25,50]" [value]="dataSource" [scrollable]="true" scrollHeight="300px">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th class="p-d-flex">
+          <span class="p-input-icon-left p-ml-auto">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')"
+              placeholder="Search" />
+          </span>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-customer>
+      <tr *ngIf="customer.first_name">
+        <td>{{customer.first_name}} {{customer.last_name}}</td>
+        <td>{{customer.points}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

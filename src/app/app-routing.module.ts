@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
+import { FirstComponent } from './web-api/group-panel/first.component';
+import { SecondComponent } from './web-api/admin-panel/second.component';
 
 
 const routes: Routes = [
