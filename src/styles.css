@@ -7,6 +7,9 @@ body {
     padding: 2rem;
     height: 100vh;
     display: flex;
-    justify-content: center;
     background-color: #e9ecef;
+}
+
+app-root{
+    width: 100%;
 }

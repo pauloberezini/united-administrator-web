@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       label: 'Menu',
       icon: 'pi pi-microsoft',
       items: [
-        { label: 'Admin Panel', icon: 'pi pi-shield', routerLink: '/second-component' },
+        { label: 'Admin Panel', icon: 'pi pi-shield', routerLink: '/login' },
         { label: 'Group', icon: 'pi pi-chart-bar', routerLink: ['/first-component'] }
       ]
     }]

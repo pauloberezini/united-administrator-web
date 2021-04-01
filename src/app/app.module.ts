@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FirstComponent } from './web-api/group-panel/first.component';
-import { SecondComponent } from './web-api/admin-panel/second.component';
+import { Login } from './web-api/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
@@ -17,7 +17,7 @@ import {MenubarModule} from 'primeng/menubar';
   declarations: [
     AppComponent,
     FirstComponent,
-    SecondComponent
+    Login
   ],
   imports: [
     BrowserModule,
