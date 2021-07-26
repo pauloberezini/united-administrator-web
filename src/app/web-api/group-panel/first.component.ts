@@ -18,7 +18,6 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.apiService.fetchData(params.chat_id).subscribe((data: any) => {
-        debugger
         data.message.sort((a, b) => b.points - a.points);
         this.dataSource = data.message;
       })

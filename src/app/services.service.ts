@@ -13,14 +13,12 @@ export class ServicesService {
   constructor(private httpClient: HttpClient) { }
 
   public fetchData(token: string) {
-    debugger
     let chat_id: string = token.split("token")[0];
-    return this.httpClient.get(`${this.SERVER_URL2}/chat/` + chat_id);
+    return this.httpClient.get(`${this.SERVER_URL}/chat/` + chat_id);
   }
 
   public getAccessToAdminPanel(id: string) {
-    debugger
-    return this.httpClient.get(`${this.SERVER_URL2}/access/adminpanel/` + id);
+    return this.httpClient.get(`${this.SERVER_URL}/access/adminpanel/` + id);
   }
 
 }

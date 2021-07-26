@@ -15,18 +15,15 @@ export class Login implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private apiService: ServicesService) { }
 
   // ngOnInit(): void {
-  debugger //router get value
+   //router get value
 
   // }
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      debugger
       this.apiService.getAccessToAdminPanel(params.token).subscribe((data: any) => {
         this.apiService.fetchData(params.token).subscribe((data: any) => {
-          debugger
           data.message.sort((a, b) => b.points - a.points);
           this.dataSource = data.message;
-          debugger
         })
       })
     });
