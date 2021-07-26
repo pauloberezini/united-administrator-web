@@ -3,5 +3,10 @@
         "target": "https://united-administrator.herokuapp.com",
         "secure": false,
         "logLevel": "debug"
+    },
+    "/access/adminpanel/*": {
+        "target": "https://united-administrator.herokuapp.com",
+        "secure": false,
+        "logLevel": "debug"
     }
 }
