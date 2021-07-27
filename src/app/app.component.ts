@@ -19,10 +19,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.buildMenu();
     this.route.queryParams.subscribe(params => {
+      debugger
       if (JSON.stringify(params) !== '{}') {
         // this.router.navigate(['/first-component', { chat_id: params['chat_id'] }]);
-        this.router.navigate(['/first-component'], { queryParams: { chat_id: params['chat_id'] } });
-        this.router.navigate(['/login'], { queryParams: { token: params['token'] } });
+        if (params.chat_id) this.router.navigate(['/first-component'], { queryParams: { chat_id: params['chat_id'] } });
+        if (params.token) this.router.navigate(['/login'], { queryParams: { token: params['token'] } });
       }
     });
   }

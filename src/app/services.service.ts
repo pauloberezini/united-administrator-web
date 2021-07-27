@@ -13,6 +13,9 @@ export class ServicesService {
   constructor(private httpClient: HttpClient) { }
 
   public fetchData(token: string) {
+    if(!token){
+      return;
+    }
     let chat_id: string = token.split("token")[0];
     return this.httpClient.get(`${this.SERVER_URL}/chat/` + chat_id);
   }
