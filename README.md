@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## How to start
 
 npm install
+
 npm install -g typescript
+
 npm install -g @angular/cli
 
 ## Development server
